@@ -14,9 +14,9 @@ function parseInput(input) {
       updates.push(line.split(',').map(Number)); 
     }
   }
-
   return { rules, updates };
 }
+
 function isValidUpdate(update, rules) {
   for (const [x, y] of rules) {
     if (update.includes(x) && update.includes(y)) {

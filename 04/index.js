@@ -5,7 +5,6 @@ let sum = 0
 for (let x = 0; x < arrays.length; x++) {
   for (let y = 0; y < arrays[x].length; y++) {
     const current = arrays[x][y];
-
     if (current == "X") {
       const above = arrays[x - 1]?.[y]
       if (above == "M") {

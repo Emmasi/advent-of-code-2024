@@ -1,18 +1,7 @@
-let array = {
-  190: [10, 19],
-  3267: [81, 40, 27],
-  83: [17, 5],
-  156: [15, 6],
-  7290: [6, 8, 6, 15],
-  161011: [16, 10, 13],
-  192: [17, 8, 14],
-  21037: [9, 7, 18, 13],
-  292: [11, 6, 16, 20],
-};
 const fs = require('fs')
 const data = fs.readFileSync('./07/input.txt', 'utf8').trim().split("\n").reduce((obj, line) => {
-  const [key, ...values] = line.split(/[:\s]+/); // Dela upp vid kolon och mellanslag
-  obj[key] = values.map(Number); // Omvandla värden till nummer och lägg till i objektet
+  const [key, ...values] = line.split(/[:\s]+/); 
+  obj[key] = values.map(Number);
   return obj;
 }, {});
 
